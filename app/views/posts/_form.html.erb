@@ -10,6 +10,7 @@
 	</div>
 	<%= f.hidden_field :user_id, :value => current_user.id %>
 
-	<%= f.submit"Create Post!" %>
+	<%= f.submit"Create Post!", :class => 'btn btn-success' %>
+	<%= link_to"Cancel", root_url, :class => 'btn btn-danger form' %>
 
 <% end %>

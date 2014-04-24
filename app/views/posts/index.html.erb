@@ -8,7 +8,8 @@
 <dl>
   <% @posts.each do |post| %>
     <br />
-    <dt><%= post.name %></dt>
+    <dt><h2><%= post.name %></h2></dt>
+    <h4>Authored <%= post.how_long %></h4>
     <dd><%= post.description %></dd> 
   <% end %>
 
