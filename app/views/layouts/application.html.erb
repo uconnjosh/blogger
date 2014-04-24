@@ -9,7 +9,7 @@
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <% if user_signed_in? %>
-      Logged in as: <strong><%= current_user.name %></strong>.
+      Welcome,  <strong><%= current_user.email %></strong>.
 
       <%= link_to 'Edit profile', edit_user_registration_path %> |
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -19,10 +19,14 @@
     <% end %>
   </nav>
 <div class="container">
-  <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <div class="span12">
+    <center>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
 <%= yield %>
+    </center>
+  </div>
 </div>
 </body>
 </html>

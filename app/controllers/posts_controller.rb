@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 
    def create
     @post = Post.create(post_params)
+    redirect_to root_url
   end
 
    def edit
@@ -29,6 +30,6 @@ class PostsController < ApplicationController
 
 private
   def post_params
-    params.require(:post).permit(:user_id, :name, :content)
+    params.require(:post).permit(:user_id, :name, :description)
   end
 end

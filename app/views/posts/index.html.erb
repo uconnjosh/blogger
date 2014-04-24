@@ -1,1 +1,15 @@
 <h1>Epicodus Blogger</h1>
+<br />
+<br />
+<br />
+<%= link_to"Create a new Post", new_post_path, class: 'btn btn-primary' %>
+
+<br />
+<dl>
+  <% @posts.each do |post| %>
+    <br />
+    <dt><%= post.name %></dt>
+    <dd><%= post.description %></dd> 
+  <% end %>
+
+</dl>

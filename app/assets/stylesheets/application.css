@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
+ .stuff {
+ 	position: center;
+ }
+
+ li.list {
+ 	padding: 1%;
+ }
