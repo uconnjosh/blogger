@@ -1,16 +1,35 @@
-<h1>Epicodus Blogger</h1>
-<br />
-<br />
-<br />
-<%= link_to"Create a new Post", new_post_path, class: 'btn btn-primary' %>
+<script>
+// $(document).ready(function() {
+//    var created = $('.created').text();
+//    createdInteger = parseInt(created);
+//    alert(created);
+//    created = new Date(created * 1000)
+//    alert(created);
+//  });
 
-<br />
-<dl>
-  <% @posts.each do |post| %>
+</script>
+
+  <h1>Epicodus Blogger</h1>
+
+  <br />
+  <br />
+  <br />
+  <%= link_to"Create a new Post", new_post_path, class: 'btn btn-primary' %>
+  
+  <br />
+  <dl>
+  <% @posts.reverse.each do |post| %>
+   
     <br />
     <dt><h2><%= post.name %></h2></dt>
-    <h4>Authored <%= post.how_long %></h4>
+    <div class="well">    
+    <h4>Written by <%= post.user.email %>,<span class="created">
+
+    <%= post.how_long %></span></h4>
+
     <dd><%= post.description %></dd> 
+   </div>
   <% end %>
 
 </dl>
+

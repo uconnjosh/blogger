@@ -7,24 +7,23 @@ class Post < ActiveRecord::Base
   def how_long
   	origin = self.created_at
   	age = Time.now - origin
-  	age = age.to_i
   	if age < 3600
   		age = age/60
-  		return "#{age.round} minutes ago"
+  		return "#{age.round(2)} minutes ago"
   	elsif age >= 3600 && age < 86400
   		age = age/3600
-  		return "#{age} hours ago"
+  		return "#{age.round(2)} hours ago"
   	elsif age >= 86400 && age <604800
   	    age = age/86400
-  	    return "#{age} days ago"
+  	    return "#{age.round(2)} days ago"
   	elsif age >= 604800 && age < 2419200
   		age = age/604800 
-  		return "#{age} weeks ago"
+  		return "#{age.round(2)} weeks ago"
     elsif age >= 2419200 && age < 1.year
     	age = age/2419200
-    	return "#{age} months ago"
+    	return "#{age.round(2)} months ago"
     else
-    	return "#{age} more than a year ago"
+    	return "#{age.round(2)} more than a year ago"
     end
   end
 end

@@ -15,6 +15,8 @@ gem 'less-rails-bootstrap'
 gem 'devise'
 gem 'therubyracer'
 gem 'aws-sdk'
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
 
 
 group :development do
