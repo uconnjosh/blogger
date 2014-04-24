@@ -1,2 +1,2 @@
 ###A simple blogging app
-Created solely to play around with caching in Ruby.
+Created solely to play around with caching in Rails.
